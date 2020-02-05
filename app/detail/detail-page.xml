@@ -25,7 +25,7 @@ https://docs.nativescript.org/ui/components.
     You can learn more about the NativeScript core theme at https://github.com/nativescript/theme
     -->
     <ScrollView orientation="vertical">
-    <GridLayout class="p-m20" backgroundColor="{{bgColor}}" color="{{text}}" rows="auto,auto, auto, auto, auto" coumns="">
+    <GridLayout class="p-m20" backgroundColor="{{bgColor}}" color="{{text}}" rows="auto,auto, auto, auto, auto, auto" coumns="">
         <!-- <Label text="Tap the button" class="h1 text-center"/>
         <Button text="TAP" tap="{{ onTap }}" class="-primary"/>
         <Label text="{{ message }}" class="h2 text-center" textWrap="true"/> -->
@@ -35,9 +35,9 @@ https://docs.nativescript.org/ui/components.
         <Label row="2" text="{{content}}" textWrap="true" fontSize="{{size}}"/>
         
         <Label row= "3" text="{{url}}" textWrap="true" fontSize="{{size}}"/>
-        <Button row ="4" text="Read" tap="{{onReadTap}}"></Button>
+        <Button row ="4" text="Go to article" tap="{{onReadTap}}"></Button>
 
-        
+        <Label row ="5" textAlignment="center" text="Credit:Newsapi.org" textWrap="true" color="lightGray" fontSize="18"/>
 
     </GridLayout>
 </ScrollView>

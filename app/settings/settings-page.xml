@@ -10,7 +10,7 @@ https://docs.nativescript.org/ui/components.
     http://docs.nativescript.org/ui/action-bar
     -->
     <ActionBar title="Settings" backgroundColor="lightGray" icon="">
-        <ActionItem text="&#8962;" color="white" tap="{{onHomeTap}}">  </ActionItem>
+        <ActionItem text="&#8962;" color="white" tap="{{onHomeTap}}"></ActionItem>
     </ActionBar>
 
     <!--
@@ -24,14 +24,16 @@ https://docs.nativescript.org/ui/components.
     The theme also provides a set of helper class names such as p-20, h1, h2, and text-center to enhance styling.
     You can learn more about the NativeScript core theme at https://github.com/nativescript/theme
     -->
-    <GridLayout class="p-20" backgroundColor="{{bgColor}}" rows="auto,auto,auto,auto,auto">
-        <Label  row="0" text="Pick theme: " fontSize="{{size}}" color="{{textColor}}"/>
-        <ListPicker row="1" id="theme-pick" items="{{themes}}" fontSize="{{size}}" color="{{textColor}}" selectedIndex="{{curr_theme}}"  /> 
+    <GridLayout class="p-20" backgroundColor="{{bgColor}}" rows="auto,auto,auto,auto,auto,*">
+        <Label row="0" text="Pick theme: " fontSize="{{size}}" color="{{textColor}}"/>
+        <ListPicker row="1" id="theme-pick" items="{{themes}}" fontSize="{{size}}" color="{{textColor}}" selectedIndex="{{curr_theme}}" />
         <Label row="2" text="Pick font size:" fontSize="{{size}}" color="{{textColor}}"/>
-        <ListPicker row="3" id="font-pick" items="{{fonts}}" fontSize = "{{size}}" color="{{textColor}}" selectedIndex="{{curr_font}}" /> 
+        <ListPicker row="3" id="font-pick" items="{{fonts}}" fontSize = "{{size}}" color="{{textColor}}" selectedIndex="{{curr_font}}" />
         <GridLayout row ="4" columns="*" tap="{{onApplyTap}}">
-        <!-- <Button  col="0" text="Cancel"  backgroundColor="gray"  /> -->
-        <Button col="1" text="Apply changes "  backgroundColor="gray"/>
+            <!-- <Button col="0" text="Cancel" backgroundColor="gray" /> -->
+            <Button col="1" text="Apply changes " backgroundColor="gray"/>
         </GridLayout>
+        <Label row="5" text="Developed by Blaise Mahoro in fulfillment of requirements for CMSC 4233/5233 Spring 2020 assignment4" textWrap="true" color="lightgray" />
     </GridLayout>
+
 </Page>

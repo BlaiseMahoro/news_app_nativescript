@@ -24,6 +24,7 @@ https://docs.nativescript.org/ui/components.
     The theme also provides a set of helper class names such as p-20, h1, h2, and text-center to enhance styling.
     You can learn more about the NativeScript core theme at https://github.com/nativescript/theme
     -->
+   
     <GridLayout class="p-m20" backgroundColor="{{bgColor}}"  fontSize="{{size}}" rows="auto,*">
         <!-- <Label text="Tap the button" class="h1 text-center"/>
         <Button text="TAP" tap="{{ onTap }}" class="-primary"/>-->
@@ -47,4 +48,5 @@ https://docs.nativescript.org/ui/components.
 
 
     </GridLayout>
+
 </Page>

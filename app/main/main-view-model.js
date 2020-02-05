@@ -56,11 +56,10 @@ function createViewModel(page) {
         const page = frame.topmost().currentPage;
         query = getViewById(page,"search_id").text;
         //console.log("query", query);
-        url =
-    "https://newsapi.org/v2/top-headlines?country=us&apiKey=" +
-    api_key+"&q="+query;
+        viewModel.set("search","");
+        url ="https://newsapi.org/v2/top-headlines?country=us&apiKey=" +api_key+"&q="+query;
         search ="showing results for "+query;
-        viewModel.set("search",search);
+        
         //console.log("Url", url)
         fetch(url)
         .then(r => {
@@ -71,6 +70,12 @@ function createViewModel(page) {
             console.log(json.articles);
             viewModel.set("articles", json.articles);
         });
+        if(query.trim().length){
+            
+            viewModel.set("search",search);
+        }else{
+            viewModel.set("search","Showing all articles");   
+        }
     }
     viewModel.onItemTap = args => {
         const article = args.view.bindingContext;
